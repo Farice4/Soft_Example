@@ -43,10 +43,20 @@ def create_pool(conn):
 
 def get_pool(conn):
     print "Get Pool:"
-    pool=conn.network.find_pool('28516b8e-b4f0-4eeb-aa99-1cf500e4b769')
+    pool=conn.network.find_pool('30fe3b2c-5691-4f6e-b43d-f3c859e5585e')
+    print '.............'
+    print '________pool id___________'
+    print pool.id
+    print '+++++++++vip id____________'
+    print pool.vip_id
+    print '________health_monitor______'
+    print pool.health_monitors
+    print '________pool status_________'
     print pool.status
+    print '________subnet id___________'
+    print pool.subnet_id
     
-#get_pool(conn)
+get_pool(conn)
 
 def create_lister(conn):
     print "Create Listener:"
@@ -108,4 +118,13 @@ def del_member(conn):
     s = conn.network.delete_pool_member('42826869-0abc-4a6f-90e1-c3c6a328c248')
     print s
 #del_member(conn)
+
+
+def get_listener(conn):
+    print "Get listener:"
+    listener = conn.network.find_listener('97ada976-6444-42ae-a6c5-b182675e5f4b')
+    print listener.status
+    print listener.id
+
+#get_listener(conn)
 

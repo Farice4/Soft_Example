@@ -20,7 +20,7 @@ conn = create_connection()
 
 def find_loadbance(conn):
     print "Find Loadbance:"
-    lb=conn.network.find_pool('5f483fa3-3c3e-4dc3-9ede-e9f4a97729a1')
+    lb=conn.network.find_pool('7b1d2819-d812-4dd5-ba60-05eb6082de38')
     print "Pool id......"
     print lb.id
     print "members......"
@@ -31,7 +31,7 @@ def find_loadbance(conn):
     print lb.vip_id
     return lb
 
-#find_loadbance(conn)
+find_loadbance(conn)
 
 def del_members(conn, lb):
     print "delete member from lb pool"
@@ -68,5 +68,5 @@ def get_pool(conn):
     for pool in pools:
         print pool
 
-get_pool(conn)
+#get_pool(conn)
 
